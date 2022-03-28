@@ -1,7 +1,7 @@
 # 2208. Minimum Operations to Halve Array Sum
 # https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
 
-# from heapq import heapify, heappop, heappush
+from heapq import heapify, heappop, heappush
 
 
 class Solution:
