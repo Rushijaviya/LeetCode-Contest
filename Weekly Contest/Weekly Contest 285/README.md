@@ -1,4 +1,4 @@
-# Weekly Contest 286
+# Weekly Contest 285
 
 | No. | Title | Difficulty
 |:---|:---|:---|
