@@ -3,7 +3,6 @@
 
 from itertools import groupby
 
-
 class Solution:
     def removeAnagrams(self, words):
         i=1
