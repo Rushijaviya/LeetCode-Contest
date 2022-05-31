@@ -6,7 +6,6 @@ from itertools import accumulate
 
 class Solution:
     def maximumWhiteTiles(self, tiles, carpetLen):
-        '''
         tiles.sort()
         pref=[0]+list(accumulate(r-l+1 for l,r in tiles))
         end=[r for _,r in tiles]
@@ -25,8 +24,8 @@ class Solution:
             else:
                 ans=max(ans,pref[j+1]-pref[i]-end[j]+right)
         return ans
+        
         '''
-
         n=len(tiles)
         tiles.sort()
         start=[l for l,_ in tiles]
@@ -44,3 +43,4 @@ class Solution:
                 compensate=tiles[j][1]-(left+carpetLen-1)
             ans=max(ans,pref[j+1]-pref[i]-compensate)
         return ans
+        '''
