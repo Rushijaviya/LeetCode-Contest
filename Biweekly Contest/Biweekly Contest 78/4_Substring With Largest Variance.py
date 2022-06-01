@@ -45,7 +45,7 @@ class Solution:
         return ans
         '''
         
-        # kadanes algorithm
+        # kadanes algorithm (max sum subarray)
         def maxSubArray(nums):
             ans=-float('inf')
             runningsum=0
