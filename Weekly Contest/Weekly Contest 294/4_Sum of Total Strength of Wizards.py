@@ -31,3 +31,20 @@ class Solution:
             ln,rn=i-l,r-i
             ans+=(strength[i]*(racc*ln-lacc*rn))
         return ans%MOD
+        
+        '''
+        ans,MOD,ac,acc,stack=0,10**9+7,0,[0],[-1]
+        strength+=[0]
+        for r,a in enumerate(strength):
+            ac+=a
+            acc.append(ac+acc[-1])
+            while stack and strength[stack[-1]] > a:
+                i=stack.pop()
+                l=stack[-1]
+                lacc=acc[i]-acc[max(l,0)]
+                racc=acc[r]-acc[i]
+                ln,rn=i-l,r-i
+                ans+=(strength[i]*(racc*ln-lacc*rn))
+            stack.append(r)
+        return ans%MOD
+        '''
