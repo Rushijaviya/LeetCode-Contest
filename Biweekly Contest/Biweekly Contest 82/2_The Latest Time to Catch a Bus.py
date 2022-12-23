@@ -5,7 +5,7 @@ from bisect import bisect_left
 
 class Solution:
     def latestTimeCatchTheBus(self, buses, passengers, capacity):
-        
+        '''        
         def vaild(x):
             idx=bisect_left(passengers,x)
             i,j=0,0
@@ -35,4 +35,22 @@ class Solution:
                 end=mid-1
         while ans in passengers:
             ans-=1
+        return ans
+        '''
+
+        buses.sort()
+        passengers.sort()
+        m,n=len(buses),len(passengers)
+        cap=0
+        j=0
+        ans=0
+        for i in range(m):
+            while j<n and cap<capacity and passengers[j]<=buses[i]:
+                if j==0 or (passengers[j]-1!=passengers[j-1]):
+                    ans=passengers[j]-1
+                j+=1
+                cap+=1
+            if cap<capacity and (j==0 or passengers[j-1]!=buses[i]):
+                ans=buses[i]
+            cap=0
         return ans
