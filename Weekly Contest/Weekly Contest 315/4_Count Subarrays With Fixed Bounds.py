@@ -11,7 +11,6 @@ class Solution:
             rec(idx+1,temp+[idx])
             rec(idx+1,[idx])
             
-            
         ans=set()
         rec(0,[])
         count=0
