@@ -1,4 +1,4 @@
-# Weekly Contest 315
+# Weekly Contest 315 
 
 | No. | Title | Difficulty
 |:---|:---|:---|
