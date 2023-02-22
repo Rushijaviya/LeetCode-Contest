@@ -54,7 +54,7 @@ class Solution:
             return 0
         l=[weights[i+1]+weights[i] for i in range(len(weights)-1)]
         l.sort()
-        return sum(l[:-k])-sum(l[:k])
+        return sum(l[-(k-1):])-sum(l[:k-1])
         
         '''
         if k==1 or len(weights)==k:
